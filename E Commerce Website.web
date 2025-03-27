@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coder roots</title>
+    <link rel="stylesheet" href="index.css" />
+    <script async src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="left">
+        <img src="./Asset-4coder-roots-logo-final-2.png" alt="" />
+      </div>
+      <div class="center">
+        <ul>
+          <li class="dropdown-button">Skills</li>
+          <li class="dropdown-button">About</li>
+          <li class="dropdown-button">Portfolio</li>
+          <li class="dropdown-button">Contact</li>
+          <!-- <li>Skills</li>
+          
+          <li>About</li>
+          <li>Portfolio</li>
+          <li>Contact</li>
+        </ul> -->
+      </div>
+      <div  class="right">
+        <a href="#contactForm">Get Started</a>
+      </div>
+    </header>
+    <div class="dropdown">
+      <div class="dropdown-content">
+          <a href="#">Python</a>
+          <a href="#">Data Analytics</a>
+          <a href="#">Web Development</a>
+      </div>
+      
+    </div>
+    <div class="pa">
+      <h1>Incredible website creation with Coder Roots</h1>
+    </div>
+    <div class="nm">
+      <h4>
+        helps you to build company website that is modern, user friendly, good
+        and clean design
+      </h4>
+    </div>
+    <div class="main">
+      <div class="C1">
+        <div class="c1">
+          <img src="About Us - Coder Roots_files/Mask-group-60.png" />
+
+          <h1>website Design</h1>
+          <p>
+            We prioritize responsive design, making sure your site looks and
+            functions perfectly on all devices, from desktops to smartphones. By
+            combining aesthetics with functionality, we deliver websites that
+            not only capture attention but also engage visitors
+          </p>
+          <hr>
+          <div class="xv">
+            <img src="icons8-instagram-logo.gif">
+            <h1>Custom Web Development</h1>
+            <p>Coder Roots excels in custom web development, crafting tailored solutions that enhance functionality and deliver exceptional user experiences.</p>
+          </div>
+         
+        </div>
+       
+        <div class="c2">
+          
+          <img src="About Us - Coder Roots_files/Group-1597883111.png" />
+        </div>
+      </div>
+      
+      <div class="parent">
+      
+        <div class="d1">
+          
+          <img src="About Us - Coder Roots_files/Mask-group-57.png" />
+          <div class="bn">
+          
+          <h1>UI/UX Design</h1> 
+          
+          <p>
+            Our expert designers focus on aesthetics and functionality, delivering digital products that are visually stunning and provide seamless navigation for an exceptional user experience.
+          </p>
+          
+          <hr>
+        </div>
+        </div>
+        <div class="d2">
+          <!-- <img src="About Us - Coder Roots_files/Frame-1597884178.png"/> -->
+        </div>
+        <div class="df">
+            
+          <img src="icons8-instagram-logo.gif">
+          <h1>Business Web Development</h1>
+          <p>Coder Roots designs powerful ERP web applications that 
+            enhance user interaction and deliver clear, actionable results for businesses.</p>
+
+        </div>
+
+      </div>
+    
+      
+    </div>
+    <hr>
+    
+    <form id="contactForm" class="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  
+      <label for="mobile">Mobile Number:</label>
+      <input type="text" id="mobile" name="mobile" placeholder="Enter your Mobile Number" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+  
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="3" placeholder="Enter your Message" required></textarea>
+  
+      <button type="submit" id="sendContact">Send</button>
+  
+      <div class="logo">
+          <a href="https://www.instagram.com/explore/">
+              <img src="icons8-instagram-logo.gif" alt="Instagram Logo">
+          </a>
+      </div>
+  </form>
+    </div>
+    
+
+    <script >
+      // script.js
+document.querySelector('.dropdown-button').addEventListener('click', function() {
+    const dropdownContent = document.querySelector('.dropdown-content');
+    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+});
+
+   </script>
+
+   <script async>
+    // script.js
+
+// Initialize EmailJS with your user ID (you get this from the EmailJS dashboard)
+emailjs.init("arjunkumar2003thakur@gmail.com");
+
+document.querySelector('.form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get values from the form
+    const name = document.getElementById('name').value;
+    const mobile = document.getElementById('mobile').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Prepare template params
+    const templateParams = {
+        name: name,
+        mobile: mobile,
+        email: "arjunkumar2003thakur@gmail.com",
+        message: message
+    };
+
+    console.log(templateParams);
+    
+
+    // Send the email using EmailJS
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+        .then(function(response) {
+            alert("Email sent successfully!");
+        }, function(error) {
+            alert("Failed to send email. Please try again.");
+        });
+});
+   </script>
+   <p id="location">
+    
+   </p>
+  </body>
+</html>
+
+
+
+
+
+
+
+
